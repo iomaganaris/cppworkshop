@@ -42,7 +42,7 @@ std::vector<T> generate_geometric_samples(std::size_t sample_number,
 ///
 bool is_divisible_by(std::vector<unsigned long> &v, unsigned long d) {
   bool result = false;
-  //std::all_of(std::begin(v),std::end(v),[&n,d,result](){if (n % d != 0) result=true; });
+  result=std::all_of(std::begin(v),std::end(v),[&n,d](){if (n % d != 0) return true; });
   return result;
 }
 
